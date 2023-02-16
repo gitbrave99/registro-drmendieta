@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/material-dashboard.css?v=2.1.0">
-    <link rel="stylesheet" href="assets/demo/demo.css">
+
 
 </head>
 
@@ -27,7 +27,7 @@
                         <div class="text-center" style="margin-bottom: -10px; margin-top: 15px;"> 
                             <img src="assets/img/logo.png"> 
                         </div>
-                        <hr style="border-top: 2px solid rgba(136, 57, 167, 0.274);"/>
+                        <hr style="border-top: 2px solid rgba(2,87,126, 0.274);"/>
                         <div class="card-body">
                             <form id="frmLoginUsers">
                                 <div class="form-group mb-2">
@@ -62,73 +62,10 @@
             </div>
         </div>
     </div>
-    <!--   Core JS Files   -->
-
+    
     <script src="assets/js/core/jquery.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
-    <script src="https://unpkg.com/default-passive-events"></script>
-    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Chartist JS -->
-    <script src="assets/js/plugins/chartist.min.js"></script>
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/plugins/bootstrap-notify.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="assets/js/material-dashboard.js?v=2.1.0"></script>
-    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-    <script src="assets/demo/demo.js"></script>
-
-
-    <!-- FIREBASE -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyAEg_yQb0FhHjl7EG967BjTcPBPZxdHmiM",
-            authDomain: "escuelascrum.firebaseapp.com",
-            databaseURL: "https://escuelascrum-default-rtdb.firebaseio.com",
-            projectId: "escuelascrum",
-            storageBucket: "escuelascrum.appspot.com",
-            messagingSenderId: "855708798969",
-            appId: "1:855708798969:web:bdad54c63bd7f4bc747728"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="./assets/js/login/globalsesion.js"></script>
-    <script src="./assets/js/login/login.js"></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", (e) => {
-            if (GetLSSesionUser()==null) {
-                console.log("puede iniciar sesin");
-            }else{
-                console.log("redirigienao a  perfiles tipo=",GetLSSesionTipoU());
-                if (GetLSSesionTipoU()=="estudiante") {
-                    RutaDeAccesoPerfilUser("estudiante/perfil");
-                }
-                else if(GetLSSesionTipoU()=="admninistrador"){
-                    RutaDeAccesoPerfilUser("administrado/gestionusuario");
-                }
-                else if(GetLSSesionTipoU()=="docente"){
-                    RutaDeAccesoPerfilUser("docente/perfil");
-                }
-                // location.reload();
-                // window.location="estudiante/perfil.html";
-            }
-            
-        });
-        
-        </script>
-
 
 </body>
-
 </html>
