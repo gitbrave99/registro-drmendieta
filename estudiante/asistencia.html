@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg">
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" >
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Mi perfil</title>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
-        name="viewport" />
+    <title>
+        Mi perfil
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="../assets/css/material-dashboard.css" rel="stylesheet" />
+   
 </head>
 
 <body>
-    <div class="wrapper">
-        <div id="sidebardk" class="sidebar" data-color="purple">
+    <div class="wrapper ">
+        <div id="sidebardk" class="sidebar" data-color="purple" >
             <div class="logo">
                 <span class="simple-text logo-normal" id="UserLog"></span>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="perfil.html">
                             <i class="material-icons">person</i>
                             <p>Perfil</p>
@@ -37,7 +40,7 @@
                             <p>Notas</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="asistencia.html">
                             <i class="material-icons">library_books</i>
                             <p>Asistencia</p>
@@ -54,7 +57,7 @@
         </div>
         <div class="main-panel">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                         <!-- <a class="navbar-brand" href="javascript:void(0)">Estudiante</a> -->
@@ -71,27 +74,33 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0)" id="completeScreen">
                                     <i class="material-icons">fullscreen</i>
-                                    <p class="d-lg-none d-md-block">Pantalla Completa</p>
+                                    <p class="d-lg-none d-md-block">
+                                        Pantalla Completa
+                                    </p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="javascript:void(0)" id="changeTheme">
                                     <i class="material-icons">brightness_6</i>
-                                    <p class="d-lg-none d-md-block">Día/Noche</p>
+                                    <p class="d-lg-none d-md-block">
+                                        Día/Noche
+                                        
+                                    </p>
                                 </a>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
             </nav>
             <!-- End Navbar -->
-            <div class="content" style="margin-top: 30px">
+            <div class="content" style="margin-top: 30px;">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header card-header-primary">
-                                    <h4 class="card-title">Perfil de estudiante</h4>
+                                    <h4 class="card-title">Asistencia</h4>
                                     <!-- <p class="card-category">Complete your profile</p> -->
                                 </div>
                                 <div class="card-body">
@@ -100,15 +109,15 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Nombre</label>
-                                                    <input type="text" class="form-control" value="" id="nombreStudent"
-                                                        disabled />
+                                                    <input type="text" class="form-control" value=""
+                                                        id="nombreStudent" disabled>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Grado</label>
-                                                    <input type="text" class="form-control" value="" id="gradoStudent"
-                                                        disabled />
+                                                    <input type="text" class="form-control" value=""
+                                                        id="gradoStudent" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -117,19 +126,17 @@
                                                 <div class="form-group bmd-form-group is-filled" id="fecha_llenadoestu">
                                                     <label class="bmd-label-floating">Fecha</label>
                                                     <input type="text" class="form-control" value=""
-                                                        id="fechanacStudent" disabled />
+                                                        id="fechanacStudent" disabled>
                                                 </div>
                                             </div>
                                             <script>
-                                                document
-                                                    .getElementById("fecha_llenadoestu")
-                                                    .classList.add("is-filled");
+                                                document.getElementById('fecha_llenadoestu').classList.add('is-filled');
                                             </script>
                                             <div class="col-md-6">
                                                 <div class="form-group grlbin">
                                                     <label class="bmd-label-floating">Sexo</label>
                                                     <!-- <label for="exampleFormControlSelect1">Periodo</label> -->
-                                                    <input type="text" class="form-control" id="sexoStudent" disabled />
+                                                    <input type="text" class="form-control" id="sexoStudent" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -146,14 +153,14 @@
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Nombre</label>
                                                     <input type="text" class="form-control" id="nombreResonsble"
-                                                        disabled />
+                                                        disabled>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Teléfono</label>
                                                     <input type="text" class="form-control" id="telResponsable"
-                                                        disabled />
+                                                        disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,14 +169,14 @@
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">E-mail</label>
                                                     <input type="email" class="form-control" id="emailResponsable"
-                                                        disabled />
+                                                        disabled>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">DUI</label>
                                                     <input type="email" class="form-control" id="duiResponsable"
-                                                        disabled />
+                                                        disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,15 +184,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Usuario</label>
-                                                    <input type="email" class="form-control" id="userStudent"
-                                                        disabled />
+                                                    <input type="email" class="form-control" id="userStudent" disabled>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Contraseña</label>
-                                                    <input type="email" class="form-control" id="passStudent"
-                                                        disabled />
+                                                    <input type="email" class="form-control" id="passStudent" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,7 +199,7 @@
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">Dirección</label>
                                                     <input type="text" class="form-control"
-                                                        value="Santa Ana, Col. Santa Leonor" id="direccion" disabled />
+                                                        value="Santa Ana, Col. Santa Leonor" id="direccion" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -213,13 +218,17 @@
                                 <div class="card-body">
                                     <h6 class="card-category">Estudiante</h6>
                                     <h4 class="card-title" id="nombreEstResumen"></h4>
-                                    <p class="card-description">Colegio Santa Ana</p>
+                                    <p class="card-description">
+                                        Colegio Santa Ana
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
     <!--   Core JS Files   -->
@@ -232,6 +241,7 @@
     <script src="../assets/js/material-dashboard.js"></script>
     <script src="../assets/js/sidebar-dash.js"></script>
     <script src="../assets/js/headerright-options.js"></script>
+
 </body>
 
 </html>
