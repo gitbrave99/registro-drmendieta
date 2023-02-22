@@ -23,9 +23,9 @@
     </style>
 </head>
 
-<body>  
+<body>
     <div class="wrapper">
-        <div id="sidebardk" class="sidebar" data-color="purple" >
+        <div id="sidebardk" class="sidebar" data-color="purple">
             <div class="logo">
                 <span class="simple-text logo-normal" id="UserLog">Nombre del logeado</span>
             </div>
@@ -112,18 +112,57 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group" id="frmgrpGrRespon">
-                                                <!-- <label class="bmd-label-floating">Nombre</label> -->
-                                                <input type="text" class="form-control" id="gradoResponsable"
-                                                    value="1 Grado" disabled />
+                                        <div class="col-12 col-sm-12 col-md-6">
+                                            <div class="form-group bmd-form-group">
+                                                <label class="bmd-label-floating">Buscar</label>
+                                                <input type="text" class="form-control" id="buscarTeacher"
+                                                    placeholder="Buscar Profesor">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover" id="tblistGrados">
+                                            <thead class=" text-primary">
+                                                <tr>
+                                                    <th scope="col" class="text-center">
+                                                        Grado
+                                                    </th>
+                                                    <th scope="col" class="text-center">
+                                                        N. Alumnos
+                                                    </th>
+                                                    <th scope="col" class="text-center">
+                                                        Acción
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">1° Grado</td>
+                                                    <td class="text-center">23</td>
+                                                    <td class="text-center">
+                                                        <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher"
+                                                            href="#crdregistronotas" data-grade="1° Grado">
+                                                            Mostrar
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">5° Grado</td>
+                                                    <td class="text-center">34</td>
+                                                    <td class="text-center">
+                                                        <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher"
+                                                            href="#crdregistronotas" data-grade="5° Grado">
+                                                            Mostrar
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12" id="materiasNotasEstu">
+                        <div class="col-md-12" id="crdregistronotas">
                             <div class="card">
                                 <div class="card-header card-header-tabs card-header-primary">
                                     <div class="form-check form-check-inline">
@@ -471,7 +510,7 @@
                 <div class="modal-body ">
                     <form id="frmIngresoNotas" class="needs-validation">
                         <div class="form-group bmd-form-group is-filled">
-                           
+
                             <label for="selectForPeriodos" class="bmd-label-static">Elegir</label>
                             <select class="form-control selectaddnotas" id="" required="">
                                 <option value="1">I Trimestre</option>
