@@ -6,7 +6,7 @@
     <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png"> -->
     <link rel="icon" type="image/png" href="../assets/img/logoForRP.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Gestión de usuarios</title>
+    <title>Ingreso de notas</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
         name="viewport" />
     <!--     Fonts and icons     -->
@@ -15,65 +15,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <!-- CSS Files -->
     <link href="../assets/css/material-dashboard.css" rel="stylesheet" />
+
     <style>
-        /* #tableTeachersReg thead th {
-            cursor: pointer;
-            color: white;
-        }
-
-        #tableAdminRegs thead th {
-            cursor: pointer;
-            color: white;
-        }
-
-        #tableStudentsReg thead th {
-            cursor: pointer;
-            color: white;
-        } */
-
-        .selectBGDark{
-            background-color: #1a2035 !important;
+        #selectForPeriodos {
+            background-color: #1a2035;
         }
     </style>
-
 </head>
 
-<body class="">
+<body>
     <div class="wrapper">
         <div id="sidebardk" class="sidebar" data-color="purple">
             <div class="logo">
-                <span class="simple-text logo-normal" id="UserLog"></span>
+                <span class="simple-text logo-normal" id="UserLog">Nombre del logeado</span>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="./perfil.html">
                             <i class="material-icons">person</i>
-                            <p>Perfil</p>
+                            <p>Mi perfil</p>
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./gestionusuario.html">
-                            <i class="material-icons">person_add</i>
-                            <p>Gestión de usuarios</p>
+                        <a class="nav-link" href="gestionusuario.html">
+                          <i class="material-icons">library_books</i>
+                          <p>Gestión de Usuarios</p>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./gestiongrado.html">
-                            <i class="material-icons">class</i>
-                            <p>Gestión de grados</p>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="gestiongrado.html">
+                          <i class="material-icons">library_books</i>
+                          <p>Gestión de Grados</p>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./calificaciones.html">
+                      </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./ingresonotas.html">
                             <i class="material-icons">content_paste</i>
-                            <p>Calificaciones</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./boletanotas.html">
-                            <i class="material-icons">content_paste</i>
-                            <p>Boleta De Notas</p>
+                            <p>Ingreso de notas</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -82,12 +61,6 @@
                             <p>Cerrar sesión</p>
                         </a>
                     </li>
-                    <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="./upgrade.html">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> -->
                 </ul>
             </div>
         </div>
@@ -96,7 +69,7 @@
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:void(0)">Gestión de usuarios</a>
+                        <a class="navbar-brand" href="javascript:void(0)">Lista de grados</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -119,6 +92,14 @@
                                     <p class="d-lg-none d-md-block">Día/Noche</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./perfil.html">
+                                    <i class="material-icons">person</i>
+                                    <p class="d-lg-none d-md-block">
+                                        Perfil
+                                    </p>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -127,638 +108,66 @@
             <div class="content" style="margin-top: 30px">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12" id="materiasNotasEstu">
+                        <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header card-header-tabs card-header-primary">
-                                    <div class="form-check form-check-inline" id="panelsUsers">
-                                        <h4 class="card-title">Usuarios</h4>
+                                <div class="card-header card-header-primary">
+                                    <div class="form-check form-check-inline">
+                                        <h4 class="card-title">Grado reponsable</h4>
                                         &nbsp;&nbsp;
                                         <!-- <ul class="nav nav-tabs" data-tabs="tabs">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="notas.html" data-toggle="modal"
-                                                    data-target="#mdPrintNotasMatInAll" id="printBoletNotas">
-                                                    <i class="material-icons">print</i> Imprimir
-                                                    <div class="ripple-container"></div>
-                                                </a>
-                                            </li>
-                                        </ul> -->
-                                    </div>
-                                    <div class="nav-tabs-navigation">
-                                        <div class="nav-tabs-wrapper">
-                                            <span class="nav-tabs-title">Tipo:</span>
-                                            <ul class="nav nav-tabs" data-tabs="tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#mAdminreg" data-toggle="tab"
-                                                        id="tabbAdmin">
-                                                        Administrador
-                                                        <div class="ripple-container"></div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#mdDocentReg" data-toggle="tab"
-                                                        id="tabbTeache">
-                                                        Docente
-                                                        <div class="ripple-container"></div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#mdEstudentReg" data-toggle="tab"
-                                                        id="tabbStudent">
-                                                        Estudiante
-                                                        <div class="ripple-container"></div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body" style="margin-top: 20px">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="mAdminreg">
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <form id="formIngresoAdmin">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group grlbin dvnmad">
-                                                                    <label class="bmd-label-floating">Nombre</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inNombreAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group grlbin">
-                                                                    <label class="bmd-label-floating">E-mail</label>
-                                                                    <input type="email" class="form-control"
-                                                                        id="inEmailAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group grlbin">
-                                                                    <label class="bmd-label-floating">Fecha de
-                                                                        nacimiento</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inNaciAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group bmd-form-group is-filled">
-                                                                    <label
-                                                                        class="bmd-label-floating ">Sexo</label>
-                                                                    <select class="form-control selectItems " id="selSexAdmin"
-                                                                        required>
-                                                                        <option selected disabled value="Elegir">
-                                                                            Elegir
-                                                                        </option>
-                                                                        <option value="Femenino">Femenino</option>
-                                                                        <option value="Masculino">
-                                                                            Masculino
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group grlbin">
-                                                                    <label class="bmd-label-floating">DUI</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inDuiAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group grlbin">
-                                                                    <label class="bmd-label-floating">Teléfono</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inTelAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group grlbin">
-                                                                    <label class="bmd-label-floating">Usuario</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inUserAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group grlbin">
-                                                                    <label class="bmd-label-floating">Contraseña</label>
-                                                                    <input type="password" class="form-control"
-                                                                        id="inContraAdmin" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary pull-right"
-                                                            id="btnRegisAdmin">
-                                                            Registrar
-                                                        </button>
-                                                        <div class="clearfix"></div>
-                                                    </form>
-                                                </div>
-                                                <!-- col perfil para fonot  -->
-                                                <div class="col-md-4">
-                                                    <div class="card card-profile">
-                                                        <div class="card-avatar">
-                                                            <a href="#pablo">
-                                                                <img class="img" src="../assets/img/faces/marc.jpg" />
-                                                            </a>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <h6 class="card-category">Admin</h6>
-                                                            <h4 class="card-title" id="resAdmin">Nombre</h4>
-                                                            <p class="card-description">
-                                                                Colegio de Santa Ana
-                                                            </p>
-                                                            <!-- <a href="#pablo" class="btn btn-primary btn-round">Subir</a> -->
-                                                            <div class="input-group has-validation">
-                                                                <div class="invalid-feedback">
-                                                                    Please choose a username.
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="mdDocentReg">
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <form id="frmIngresoDocente">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Nombre</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inNombreTeacher" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">E-mail</label>
-                                                                    <input type="email" class="form-control"
-                                                                        id="inEmailTeacher" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Fecha de
-                                                                        nacimiento</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inNaciTeacher" required />
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Sexo</label>
-                                                                    <!-- <label for="selsexTeachers">Periodo</label> -->
-                                                                    <select class="form-control selectItems" id="selsexTeacher"
-                                                                        required>
-                                                                        <option selected disabled value="Elegir">
-                                                                            Elegir
-                                                                        </option>
-                                                                        <option value="Femenino">Femenino</option>
-                                                                        <option value="Masculino">
-                                                                            Masculino
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">DUI</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inDuiTeacher" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Teléfono</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inTelTeacher" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Usuario</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inUserTeacher" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Contraseña</label>
-                                                                    <input type="password" class="form-control"
-                                                                        id="inPassTeacher" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefTech">
-                                                                    <label class="bmd-label-floating">Grados</label>
-                                                                    <!-- <label class="bmd-label-floating">Sexo</label> -->
-                                                                    <!-- <label for="selgradoforesTeacher">  </label> -->
-                                                                    <select class="form-control selectItems"
-                                                                        id="selgradoforesTeacher" required>
-                                                                        <option selected disabled value="Elegir">
-                                                                            Elegir
-                                                                        </option>
-                                                                        <option value="1° Grado">1° Grado</option>
-                                                                        <option value="2° Grado">2° Grado</option>
-                                                                        <option value="3° Grado">3° Grado</option>
-                                                                        <option value="4° Grado">4° Grado</option>
-                                                                        <option value="5° Grado">5° Grado</option>
-                                                                        <option value="6° Grado">6° Grado</option>
-                                                                        <option value="7° Grado">7° Grado</option>
-                                                                        <option value="8° Grado">8° Grado</option>
-                                                                        <option value="9° Grado">9° Grado</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary pull-right"
-                                                            id="btnRegisTeacher">
-                                                            Registrar
-                                                        </button>
-                                                        <div class="clearfix"></div>
-                                                    </form>
-                                                </div>
-                                                <!-- col perfil para fonot  -->
-                                                <div class="col-md-4">
-                                                    <div class="card card-profile">
-                                                        <div class="card-avatar">
-                                                            <a href="#pablo">
-                                                                <img class="img" src="../assets/img/faces/marc.jpg" />
-                                                            </a>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <h6 class="card-category">Docente</h6>
-                                                            <h4 class="card-title" id="resTeacher">
-                                                                Nombre
-                                                            </h4>
-                                                            <p class="card-description">
-                                                                Colegio Santa Ana
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="mdEstudentReg">
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <form id="frmIngresoEstudiante">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Nombre</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inNombreEstudiante" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Fecha de
-                                                                        nacimiento</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inFechNacEstudiante" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Sexo</label>
-                                                                    <!-- <label for="tipesexEstudianteingreso">Periodo</label> -->
-                                                                    <select class="form-control selectItems"
-                                                                        id="tipesexEstudianteingreso" required>
-                                                                        <option selected disabled value="Elegir">
-                                                                            Elegir
-                                                                        </option>
-                                                                        <option value="Femenino">Femenino</option>
-                                                                        <option value="Masculino">
-                                                                            Masculino
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Usuario</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inUserEstudiante" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Contraseña</label>
-                                                                    <input type="password" class="form-control"
-                                                                        id="inPassEstudiante" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Grados
-                                                                    </label>
-                                                                    <!-- <label class="bmd-label-floating">Sexo</label> -->
-                                                                    <!-- <label for="selectGradoEstudiante">  </label> -->
-                                                                    <select class="form-control selectItems"
-                                                                        id="selectGradoEstudiante" required>
-                                                                        <option selected disabled value="Elegir">Elegir
-                                                                        </option>
-                                                                        <option value="1° Grado" data-techRG="jorge ">1° Grado</option>
-                                                                        <option value="2° Grado">2° Grado</option>
-                                                                        <option value="3° Grado">3° Grado</option>
-                                                                        <option value="4° Grado">4° Grado</option>
-                                                                        <option value="5° Grado">5° Grado</option>
-                                                                        <option value="6° Grado">6° Grado</option>
-                                                                        <option value="7° Grado">7° Grado</option>
-                                                                        <option value="8° Grado">8° Grado</option>
-                                                                        <option value="9° Grado">9° Grado</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <span> </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="text-center">
-                                                                    <h6>Datos de responsable</h6>
-                                                                </div>
-                                                                <div class="dropdown-divider"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Nombre</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inNombreEstuRespon" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Teléfono</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inTelEstuRespon" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">E-mail</label>
-                                                                    <input type="email" class="form-control"
-                                                                        id="inEmailEstuRespon" required />
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">DUI</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="inDUIEstuRspon" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group inefstu">
-                                                                    <label class="bmd-label-floating">Dirección</label>
-                                                                    <input type="text" class="form-control" value=""
-                                                                        id="inDireccEstuRespon" required />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary pull-right"
-                                                            id="btnStudenForm">
-                                                            Registrar
-                                                        </button>
-                                                        <div class="clearfix"></div>
-                                                    </form>
-                                                </div>
-                                                <!-- col perfil para fonot  -->
-                                                <div class="col-md-4">
-                                                    <div class="card card-profile">
-                                                        <div class="card-avatar">
-                                                            <a href="#pablo">
-                                                                <img class="img" src="../assets/img/faces/marc.jpg" />
-                                                            </a>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <h6 class="card-category">Estudiante</h6>
-                                                            <h4 class="card-title" id="resEstudiante">
-                                                                Nombre
-                                                            </h4>
-                                                            <p class="card-description">
-                                                                Instituto Educativo de Santa Ana
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col" id="containerTbUsers"></div>
-                    </div>
-                    <!-- TABLE FOR USER -->
-                    <div class="row">
-                        <div class="col-md-12" id="tblistAdmisRegistered">
-                            <div class="card">
-                                <div class="card-header card-header-primary">
-                                    <div class="form-check form-check-inline" id="materiasNotasEstu">
-                                        <h4 class="card-title">Administradores</h4>
-                                        &nbsp;&nbsp;
-                                        <ul class="nav nav-tabs" data-tabs="tabs">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="notas.html" data-toggle="tab"
-                                                    id="printBoletNotas">
-                                                    <button type="button" class="btn btn-primary" id="btnEstudiante"
-                                                        data-dismiss="modal">
-                                                        <i class="material-icons">print</i>
-                                                        Imprimir
-                                                    </button>
-                                                </a>
-                                            </li>
-                                        </ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="notas.html" data-toggle="tab" id="printBoletNotas">
+                          <i class="material-icons">print</i> Imprimir
+                          <div class="ripple-container"></div>
+                        </a>
+                      </li>
+                    </ul> -->
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-12 col-sm-12 col-md-6">
-                                            <div class="form-group">
+                                            <div class="form-group bmd-form-group">
                                                 <label class="bmd-label-floating">Buscar</label>
-                                                <input type="text" class="form-control" id="buscarAdminRg"
-                                                    placeholder="Buscar administrador" />
+                                                <input type="text" class="form-control" id="buscarTeacher"
+                                                    placeholder="Buscar Profesor">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
-                                        <!-- TABLE FOR ADMINS REGISTRADOS -->
-                                        <table class="table table-hover" id="tableAdminRegs">
-                                            <thead>
+                                        <table class="table table-hover" id="tblistGrados">
+                                            <thead class=" text-primary">
                                                 <tr>
-                                                    <th>Nombre</th>
-                                                    <th>Correo</th>
-                                                    <th>Nacimiento</th>
-                                                    <th>Sexo</th>
-                                                    <th>DUI</th>
-                                                    <th>Teléfono</th>
-                                                    <th>Usuario</th>
-                                                    <th>Contraseña</th>
-                                                    <th>Acción</th>
+                                                    <th scope="col" class="text-center">
+                                                        Grado
+                                                    </th>
+                                                    <th scope="col" class="text-center">
+                                                        N. Alumnos
+                                                    </th>
+                                                    <th scope="col" class="text-center">
+                                                        Acción
+                                                    </th>
                                                 </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12" id="tblisTeacherRegistered" style="display: none">
-                            <!-- TABLE DOCENTES REGISTRADOS -->
-                            <div class="card">
-                                <div class="card-header card-header-primary">
-                                    <div class="form-check form-check-inline" id="materiasNotasEstu">
-                                        <h4 class="card-title">Docentes</h4>
-                                        &nbsp;&nbsp;
-                                        <ul class="nav nav-tabs" data-tabs="tabs">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="notas.html" data-toggle="tab"
-                                                    id="printBoletNotas">
-                                                    <button type="button" class="btn btn-primary" id="btnAdmin"
-                                                        data-dismiss="modal">
-                                                        <i class="material-icons">print</i>
-                                                        Imprimir
-                                                    </button>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-6">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Buscar</label>
-                                                <input type="text" class="form-control" id="buscarTeacherRg"
-                                                    placeholder="Buscar profesor" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <table class="table table-hover" id="tableTeachersReg">
-                                            <thead id="theadTechtbRegi">
-                                                <th class="text-white">Nombre</th>
-                                                <th>Correo</th>
-                                                <th>Nacimiento</th>
-                                                <th>Sexo</th>
-                                                <th>DUI</th>
-                                                <th>Teléfono</th>
-                                                <th>Grado</th>
-                                                <th>Usuario</th>
-                                                <th>Contraseña</th>
-                                                <th>Acción</th>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12" id="tblistStudentsRegistered" style="display: none">
-                            <!-- TABLE ESTUDIANTES REGISTRADO  -->
-                            <div class="card">
-                                <div class="card-header card-header-primary">
-                                    <div class="form-check form-check-inline" id="materiasNotasEstu">
-                                        <h4 class="card-title">Estudiantes</h4>
-                                        &nbsp;&nbsp;
-                                        <ul class="nav nav-tabs" data-tabs="tabs">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="notas.html" data-toggle="tab"
-                                                    id="printBoletNotas">
-                                                    <button type="button" class="btn btn-primary" id="btnDocente"
-                                                        data-dismiss="modal">
-                                                        <i class="material-icons">print</i>
-                                                        Imprimir
-                                                    </button>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-6">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Buscar</label>
-                                                <input type="text" class="form-control" id="buscarEstudentRg"
-                                                    placeholder="Buscar estudiante" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <!-- TABLE FOR estudnates REGISTRADOS -->
-                                        <table class="table table-hover" id="tableStudentsReg">
-                                            <thead class="text-primary">
-                                                <th>Nombre</th>
-                                                <th>Nacimiento</th>
-                                                <th>Sexo</th>
-                                                <th>Grado</th>
-                                                <th>Responsable</th>
-                                                <th>Teléfono</th>
-                                                <th>Correo</th>
-                                                <th>DUI</th>
-                                                <th>Usuario</th>
-                                                <th>Contraseña</th>
-                                                <th>Acción</th>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>Jhon Rambo</td>
-                                                    <td>12/02/1999</td>
-                                                    <td>Masculino</td>
-                                                    <td>Juan Padn</td>
-                                                    <td>4578-8445</td>
-                                                    <td>Rambo88@gmail.com</td>
-                                                    <td>04578936-8</td>
-                                                    <td>rambitoj</td>
-                                                    <td>123</td>
-                                                    <td>
-                                                        <button class="btn btn-info btn-sm btnEditStudent">
-                                                            <i class="material-icons">mode_edit</i>
-                                                        </button>
-                                                        <button class="btn btn-danger btn-sm btnDelStudent">
-                                                            <i class="material-icons">delete_forever</i>
-                                                        </button>
+                                                    <td class="text-center">1° Grado</td>
+                                                    <td class="text-center">23</td>
+                                                    <td class="text-center">
+                                                        <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher"
+                                                            href="#crdregistronotas" data-grade="1° Grado">
+                                                            Mostrar
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">5° Grado</td>
+                                                    <td class="text-center">34</td>
+                                                    <td class="text-center">
+                                                        <a class="btn btn-info btn-sm btnShowAllStudentsByGradeTeacher"
+                                                            href="#crdregistronotas" data-grade="5° Grado">
+                                                            Mostrar
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -767,60 +176,483 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-12" id="crdregistronotas">
+                            <div class="card">
+                                <div class="card-header card-header-tabs card-header-primary">
+                                    <div class="form-check form-check-inline">
+                                        <!-- <h4 class="card-title " id="">General A</h4> -->
+                                        <h4 class="card-title">Registro de notas</h4>
+                                        &nbsp;&nbsp;
+                                        <ul class="nav nav-tabs" data-tabs="tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="modal"
+                                                    data-target="#mdPrintNotasMatInAll" id="printBoletNotas">
+                                                    <i class="material-icons">print</i> Imprimir
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-tabs-navigation">
+                                        <div class="nav-tabs-wrapper">
+                                            <span class="nav-tabs-title">Materias:</span>
+                                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#msociales" data-toggle="tab">
+                                                        Sociales
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#mlenguaje" data-toggle="tab">
+                                                        Lenguaje
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#mmatematic" data-toggle="tab">
+                                                        Matemáticas
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#mciencias" data-toggle="tab">
+                                                        Ciencias
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#mingles" data-toggle="tab">
+                                                        Inglés
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
 
-                        <!-- FIN ROW TABLA REGISTROS ADMIN, TEACHER Y ESTUDIANTES -->
+                                                <li class="nav-item" id="tabInformatica" style="display: none">
+                                                    <a class="nav-link" href="#minformatica" data-toggle="tab">
+                                                        Informática
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" id="tabOpv" style="display: none">
+                                                    <a class="nav-link" href="#mopv" data-toggle="tab">
+                                                        OPV
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" id="tabSeminario" style="display: none">
+                                                    <a class="nav-link" href="#mseminario" data-toggle="tab">
+                                                        Seminario
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" id="tabOptativa" style="display: none">
+                                                    <a class="nav-link" href="#moptativa" data-toggle="tab">
+                                                        Optativa
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="msociales">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control" id="buscarEstInSociales"
+                                                            placeholder="Buscar en Sociales" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporScociales">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasSociales">
+                                                    <thead class="card-header-primary">
+                                                        <tr>
+                                                            <th scope="col" colspan="1" rowspan="2">
+                                                                Estudiante
+                                                            </th>
+                                                            <th scope="col" colspan="5" class="text-center">
+                                                                1° Trimestre
+                                                            </th>
+                                                            <th scope="col" colspan="5" class="text-center">
+                                                                2° Trimestre
+                                                            </th>
+                                                            <th scope="col" colspan="5" class="text-center">
+                                                                3° Trimestre
+                                                            </th>
+                                                            <th scope="col" colspan="1" rowspan="2" class="text-center">
+                                                                Nota Final
+                                                            </th>
+                                                            <th scope="col" colspan="1" rowspan="2" class="text-center">
+                                                                Asistencia Final
+                                                            </th>
+                                                            <th scope="col" colspan="2" rowspan="2" class="text-center">
+                                                                Acciones
+                                                            </th>
+                                                            
+                                                        </tr>
+                                                        <tr>
+
+                                                            <th scope="col" class="text-center">35%</th>
+                                                            <th scope="col" class="text-center">35%</th>
+                                                            <th scope="col" class="text-center">30%</th>
+                                                            <th scope="col" class="text-center"><span>Total
+                                                                    Trimestre</span></th>
+                                                            <th scope="col" class="text-center"><span>Asistencia</span>
+                                                            </th>
+                                                            <th scope="col" class="text-center">35%</th>
+                                                            <th scope="col" class="text-center">35%</th>
+                                                            <th scope="col" class="text-center">30%</th>
+                                                            <th scope="col" class="text-center"><span>Total
+                                                                    Trimestre</span></th>
+                                                            <th scope="col" class="text-center"><span>Asistencia</span>
+                                                            </th>
+                                                            <th scope="col" class="text-center">35%</th>
+                                                            <th scope="col" class="text-center">35%</th>
+                                                            <th scope="col" class="text-center">30%</th>
+                                                            <th scope="col" class="text-center"><span>Total
+                                                                    Trimestre</span></th>
+                                                            <th scope="col" class="text-center"><span>Asistencia</span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">jaime jose torres torres</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-primary text-center">
+                                                                <span class="text-primary">6.4</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="text-warning">10%</span>
+                                                            </td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-primary text-center">
+                                                                <span class="text-primary">6.4</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="text-warning">10%</span>
+                                                            </td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-primary text-center">
+                                                                <span class="text-primary">6.4</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="text-warning">10%</span>
+                                                            </td>
+                                                            <td class="text-primary text-success">
+                                                                <span class="text-warning">1.7</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="text-warning">90%</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <button type="button"
+                                                                    class="btn btn-info btn-sm green accent-4"
+                                                                    data-toggle="modal"
+                                                                    data-toggle="tooltip"
+                                                                    data-placement="left" title="Agregar notas"
+                                                                    data-target="#mdAgregarNota">
+                                                                    <i class="material-icons">library_books</i>
+                                                                </button>
+                                                                
+                                                                <button type="button"
+                                                                class="btn btn-info btn-sm green accent-4"
+                                                                data-toggle="modal"
+                                                                data-toggle="tooltip"
+                                                                data-placement="left" title="Agregar Asistencia"
+                                                                data-target="#mdAgregarAsistencia">
+                                                                <i class="material-icons">playlist_add_check</i>
+                                                            </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="mlenguaje">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control" id="buscarEstInLenguaje"
+                                                            placeholder="Buscar en Lenguaje" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporLenguaje">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasLenguaje">
+                                                    <thead></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="mmatematic">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control"
+                                                            id="buscarEstInMatematica"
+                                                            placeholder="Buscar en Matemáticas" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporMatematica">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasMatematica">
+                                                    <thead class=""></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="mciencias">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control" id="buscarEstInCiencias"
+                                                            placeholder="Buscar en Ciencias" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporCiencia">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasCiencia">
+                                                    <thead></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="mingles">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control" id="buscarEstInIngles"
+                                                            placeholder="Buscar en Inglés" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporIngles">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasIngles">
+                                                    <thead></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="minformatica">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control"
+                                                            id="buscarEstInInformatica"
+                                                            placeholder="Buscar en Informática" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporInformatica">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasInformatica">
+                                                    <thead class=""></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="mopv">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control" id="buscarEstInOpv"
+                                                            placeholder="Buscar en OPV" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporOpv">
+                                                <table class="table table-hover table-bordered" id="tbListEstNotasOpv">
+                                                    <thead class=""></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="mseminario">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control"
+                                                            id="buscarEstInSeminario"
+                                                            placeholder="Buscar en Seminario" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporSeminario">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasSeminario">
+                                                    <thead class=""></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="moptativa">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">Buscar</label>
+                                                        <input type="text" class="form-control" id="buscarEstInOptativa"
+                                                            placeholder="Buscar en Optativa" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive" id="boxReporOptativa">
+                                                <table class="table table-hover table-bordered"
+                                                    id="tbListEstNotasOptativa">
+                                                    <thead class=""></thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="fixed-plugin" id="fixenElementMenu">
-        <div class="dropdown show-dropdown" id="menushowdrpdwn">
-            <a href="#" data-toggle="dropdown">
-                <i class="material-icons" style="font-size: 40px"> list </i>
-            </a>
-            <ul class="dropdown-menu" id="dpmenuUsuariosats">
-                <li class="header-title">Menu de usuarios</li>
-                <li class="adjustments-line">
-                    <a href="javascript:void(0)" class="switch-trigger active-color">
-                        <div class="badge-colors ml-auto mr-auto">
-                            <span class="badge filter badge-purple bgAdmini bdgitemcolr active"
-                                data-color="purple"></span>
-                            <span class="badge filter badge-azure bgTeacheri bdgitemcolr" data-color="azure"></span>
-                            <span class="badge filter badge-green bgStudenti bdgitemcolr" data-color="green"></span>
-                        </div>
-                        <div class="clearfix"></div>
-                    </a>
-                </li>
 
-                <li class="button-container">
-                    <a href="#tblistAdmisRegistered"
-                        class="btn btn-primary btn-block tuserc linkadmin">Administradores</a>
-                </li>
-                <li class="button-container">
-                    <a href="#tblisTeacherRegistered" class="btn btn-block tuserc linkteacher"
-                        style="background-color: #029eb1">
-                        Docentes
-                    </a>
-                </li>
-                <li class="button-container">
-                    <a href="#tblistStudentsRegistered" class="btn btn-block tuserc linkstudent"
-                        style="background-color: #288c6c">
-                        Estudiantes
-                    </a>
-                </li>
-            </ul>
+    <!-- MODAL AGREGAR NOTA TRIMESTRE  -->
+    <div class="modal fade" id="mdAgregarNota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                        Agregar nota
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body ">
+                    <form id="frmIngresoNotas" class="needs-validation">
+                        <div class="form-group bmd-form-group is-filled">
+
+                            <label for="selectForPeriodos" class="bmd-label-static">Elegir</label>
+                            <select class="form-control selectaddnotas" id="" required="">
+                                <option value="1">I Trimestre</option>
+                                <option value="2">II Trimestre</option>
+                                <option value="3">III Trimestre</option>
+                            </select>
+                        </div>
+                        <div class="form-row" id="rwboxNotasStudent">
+                            <div class="form-group col-md-4 bmd-form-group">
+                                <label for="inNota1" class="bmd-label-floating">Nota 1 (35%)</label>
+                                <input type="number" min="0.0" max="10" step="0.01" class="form-control" id="inNota1"
+                                    required="">
+                            </div>
+                            <div class="form-group col-md-4 bmd-form-group">
+                                <label for="inNota2" class="bmd-label-floating">Nota 2 (35%)</label>
+                                <input type="number" min="0.0" max="10" step="0.01" class="form-control" id="inNota2"
+                                    required="">
+                            </div>
+                            <div class="form-group col-md-4 bmd-form-group">
+                                <label for="inNota3" class="bmd-label-floating">Nota 3 (30%)</label>
+                                <input type="number" min="0.0" max="10" step="0.01" class="form-control" id="inNota3"
+                                    required="">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" id="btnGuardarNotas" class="btn btn-primary" data-nmmateria="Inglés"
+                                data-nmteacher="Nuria María Zabala Parra"
+                                data-nmstudent="Jeniffer Sarai Prudencio Lopez"
+                                data-idmaterysel="54eogRRVYoUBWqnqTE3o">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- FIN MODAL AGREGAR NOTA -->
 
-    <!-- modal imprimir usuarios admin, docent, student individual o todas -->
+
+
+     <!-- MODAL AGREGAR ASISTENCIA  -->
+     <div class="modal fade" id="mdAgregarAsistencia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                     Agregar Asistencia
+                 </h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true" class="text-white">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body ">
+                 <form id="frmIngresoNotas" class="needs-validation">
+                     <div class="form-group bmd-form-group is-filled">
+
+                         <label for="selectForPeriodos" class="bmd-label-static">Elegir</label>
+                         <select class="form-control selectaddnotas" id="" required="">
+                             <option value="1">I Trimestre</option>
+                             <option value="2">II Trimestre</option>
+                             <option value="3">III Trimestre</option>
+                         </select>
+                     </div>
+                     <div class="form-row" id="rwboxNotasStudent">
+                         <div class="form-group col-md-4 bmd-form-group">
+                             <label for="inNota1" class="bmd-label-floating">Porcentaje (%)</label>
+                             <input type="number" min="0.0" max="100" step="0.01" class="form-control" id="inNota1"
+                                 required="true">
+                         </div>
+                     </div>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                         <button type="submit" id="btnGuardarNotas" class="btn btn-primary">Guardar</button>
+                     </div>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
+ FIN MODAL AGREGAR ASISTENCIA
+
+
+
+    <!-- modal imprimir notas individual o todas -->
     <div class="modal fade" id="mdPrintNotasMatInAll" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content dark-edition">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-white" id="exampleModalLabel">
-                        Impresión de usuarios
+                    <h5 class="modal-title text-secondary" id="exampleModalLabel">
+                        Impresión de notas
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="text-white">&times;</span>
@@ -828,10 +660,11 @@
                 </div>
                 <div class="modal-body">
                     <form action="">
-                        <div class="form-group">
+                        <div class="form-group" id="radiosToPrintM">
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="text" id="in" value="option1" />Administrador
+                                    <input class="form-check-input" type="radio" id="rsociales" name="opremaa"
+                                        value="option1" />Sociales
                                     <span class="form-check-sign">
                                         <span class="check"></span>
                                     </span>
@@ -839,8 +672,8 @@
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="text" id="inlineCheckbox2"
-                                        value="option2" />Docentes
+                                    <input class="form-check-input" type="radio" id="rlenguaje" name="opremaa"
+                                        value="option2" />Lenguaje
                                     <span class="form-check-sign">
                                         <span class="check"></span>
                                     </span>
@@ -848,92 +681,65 @@
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="text" id="inlineCheckbox3"
-                                        value="option3" />Estudiantes
+                                    <input class="form-check-input" type="radio" id="rmatematicas" name="opremaa"
+                                        value="option3" />Matemáticas
+                                    <span class="form-check-sign">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" id="rciencias" name="opremaa"
+                                        value="option3" />Ciencias
+                                    <span class="form-check-sign">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" id="ringles" name="opremaa"
+                                        value="option3" />Inglés
+                                    <span class="form-check-sign">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" checked="" id="rtodos"
+                                        name="opremaa" />Todas
                                     <span class="form-check-sign">
                                         <span class="check"></span>
                                     </span>
                                 </label>
                             </div>
                         </div>
+                        <!-- <div class="form-group">
+              <label for="inNotaMateriaPeriod" class="bmd-label-floating">Nota</label>
+              <input type="number" class="form-control" id="inNotaMateriaPeriod">
+            </div> -->
                         <div class="form-group">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                 Cancelar
                             </button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                <i class="material-icons">print</i> Imprimir
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                onclick="GenrearPdfNotasMaterias()">
+                                <i class="material-icons">print</i>
+                                Imprimir
                             </button>
                         </div>
                     </form>
                 </div>
                 <!-- <div class="modal-footer">
-    </div> -->
+        
+        </div> -->
             </div>
         </div>
     </div>
 
-    <!-- MODAL ELIMINAR REGISGRO  -->
-    <div class="modal fade" id="mdDeleteUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-        style="display: none">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content dark-edition">
-                <div class="modal-header">
-                    <h5 class="modal-title text-white" id="exampleModalLabel">
-                        Eliminar Registro
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-light">¿Desea Eliminar Registro?</p>
-                </div>
-                <div class="modal-footer" id="mdfterDeluser">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">
-                        Cancelar
-                    </button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnModalDeleteUsuario">
-                        Eliminar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- TOASST MESSAGES -->
-    <!-- <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
-        <div class="toast fade hide p-3 bg-success rounded-lg" id="toastMesAfteDelRegis" role="alert"
-            aria-live="assertive" aria-atomic="true" data-delay="2000">
-            <div class="toast-header ">
-                <strong class="mr-auto text-white">Mensaje</strong>
-                <div class="dropdown-divider"></div>
-                 <i class="material-icons">
-                    check
-                </i> 
-                <<small>11 mins ago</small> 
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="toast-body">
-                <p class="text-white text-center">
-                    Registro eliminado correctamente
-                </p>
-            </div>
-        </div>
-    </div> -->
-
-    <script>
-      // let toastMesa = document.getElementById("toastMesAfteDelRegis");
-
-      // document.getElementById('btnToastDelete').addEventListener('click', () => {
-      //     toastMesa.classList.add('show');
-      //     toastMesa.classList.remove('hide');
-
-      // });
-    </script>
-
-    <!--   Core JS Files   -->
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
@@ -942,7 +748,6 @@
     <script src="../assets/js/material-dashboard.js"></script>
     <script src="../assets/js/sidebar-dash.js"></script>
     <script src="../assets/js/headerright-options.js"></script>
-    <script src="../assets/js/dommain.js"></script>
 </body>
 
 </html>

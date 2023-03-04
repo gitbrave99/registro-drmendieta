@@ -27,22 +27,16 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <!-- <li class="nav-item ">
+                    <li class="nav-item ">
                         <a class="nav-link" href="perfil.html">
                             <i class="material-icons">person</i>
                             <p>Perfil</p>
                         </a>
-                    </li> -->
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="notas.html">
                             <i class="material-icons">library_books</i>
                             <p>Notas</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="asistencia.html">
-                            <i class="material-icons">library_books</i>
-                            <p>Asistencia</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -91,7 +85,7 @@
                                 <a class="nav-link" href="./perfil.html">
                                     <i class="material-icons">person</i>
                                     <p class="d-lg-none d-md-block">
-                                        Perfi
+                                        Perfil
                                     </p>
                                 </a>
                             </li>
@@ -150,28 +144,44 @@
                                             </div>
                                         </div>
                                         <div class="table-responsive">
-                                            <table class="table table-hover" id="tbListEstNotasAlumnoUser">
+                                            <table class="table table-hover table-bordered rounded" id="tbListEstNotasAlumnoUser">
                                                 <thead id="theadalln" class="card-header-primary">
                                                     <tr>
-                                                        <th scope="col" colspan="1"><b>Materia</b></th>
-                                                        <th scope="col" colspan="4" class="text-center">
-                                                            1° Periodo
+                                                        <th scope="col" colspan="1" rowspan="2" class="text-center"><b>Materia</b></th>
+                                                        <th scope="col" colspan="5" class="text-center">
+                                                            1° Trimestre
                                                         </th>
-                                                        <th scope="col" colspan="4" class="text-center">
-                                                            2° Periodo
+                                                        <th scope="col" colspan="5" class="text-center">
+                                                            2° Trimestre
                                                         </th>
-                                                        <th scope="col" colspan="4" class="text-center">
-                                                            3° Periodo
+                                                        <th scope="col" colspan="5" class="text-center">
+                                                            3° Trimestre
                                                         </th>
-                                                        <th scope="col" colspan="4" class="text-center">
-                                                            4° Periodo
+                                                        <th scope="col" colspan="1" rowspan="2" class="text-center">
+                                                            <span class="">Nota Final</span>
                                                         </th>
-                                                        <th scope="col" colspan="2" class="text-center">
+                                                        <th scope="col" colspan="1" rowspan="2" class="text-center">
+                                                            <span class="">Asistencia Final</span>
                                                         </th>
                                                     </tr>
                                                     <tr>
+                                                        <!-- <th scope="col" rowspan="2" class="text-center">
+                                                            Materia
+                                                        </th> -->
                                                         <th scope="col" class="text-center">
-                                                            Estudiante
+                                                            35%
+                                                        </th>
+                                                        <th scope="col" class="text-center">
+                                                            35%
+                                                        </th>
+                                                        <th scope="col" class="text-center">
+                                                            30%
+                                                        </th>
+                                                        <th scope="col" class="text-center">
+                                                            Total Trimestre
+                                                        </th>
+                                                        <th scope="col" class="text-center">
+                                                            Asistencia
                                                         </th>
                                                         <th scope="col" class="text-center">
                                                             35%
@@ -183,7 +193,10 @@
                                                             30%
                                                         </th>
                                                         <th scope="col" class="text-center">
-                                                            Total Periodo
+                                                            Total Trimestre
+                                                        </th>
+                                                        <th scope="col" class="text-center">
+                                                            Asistencia
                                                         </th>
                                                         <th scope="col" class="text-center">
                                                             35%
@@ -195,122 +208,163 @@
                                                             30%
                                                         </th>
                                                         <th scope="col" class="text-center">
-                                                            Total Periodo
+                                                            Total Trimestre
                                                         </th>
                                                         <th scope="col" class="text-center">
-                                                            35%
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            35%
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            30%
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            Total Periodo
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            35%
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            35%
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            30%
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            Total Periodo
-                                                        </th>
-                                                        <th scope="col" class="text-center">
-                                                            Nota Final
+                                                            Asistencia
                                                         </th>
                                                     </tr>
                                                 </thead>
-                                                <tbody id="tbodyalln">
+                                                <tbody id="tbodyalln ">
                                                     <tr>
                                                         <td class="text-center">Inglés</td>
                                                         <td class="text-center">9</td>
                                                         <td class="text-center">8</td>
                                                         <td class="text-center">8</td>
                                                         <td class="text-primary text-center">8.35</td>
-                                                        <td class="text-center">9</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
                                                         <td class="text-center">8</td>
                                                         <td class="text-center">7</td>
+                                                        <td class="text-center">7</td>
                                                         <td class="text-primary text-center">8.04</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
                                                         <td class="text-center">8</td>
                                                         <td class="text-center">7</td>
                                                         <td class="text-center">5</td>
                                                         <td class="text-primary text-center">6.75</td>
-                                                        <td class="text-primary text-success"><span
-                                                                class="text-success">7.7</span></td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-success">7.7</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-warning">79%</span>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center">Lenguaje</td>
-                                                        <td class="text-center">5</td>
-                                                        <td class="text-center">3</td>
-                                                        <td class="text-center">4</td>
-                                                        <td class="text-primary text-center">4</td>
-                                                        <td class="text-center">5</td>
-                                                        <td class="text-center">6</td>
-                                                        <td class="text-center">4</td>
-                                                        <td class="text-primary text-center">5.05</td>
-                                                        <td class="text-center">4</td>
-                                                        <td class="text-center">5</td>
+                                                        <td class="text-center">9</td>
                                                         <td class="text-center">8</td>
-                                                        <td class="text-primary text-center">5.55</td>
-                                                        <td class="text-primary text-success"><span
-                                                                class="text-warning">4.9</span></td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-primary text-center">8.35</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-primary text-center">8.04</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">5</td>
+                                                        <td class="text-primary text-center">6.75</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-success">7.7</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-warning">79%</span>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center">Matemáticas</td>
-                                                        <td class="text-center">4.5</td>
-                                                        <td class="text-center">7.1</td>
-                                                        <td class="text-center">6.1</td>
-                                                        <td class="text-primary text-center">5.89</td>
-                                                        <td class="text-center">6.54</td>
-                                                        <td class="text-center">9.4</td>
-                                                        <td class="text-center">5.4</td>
-                                                        <td class="text-primary text-center">7.19</td>
-                                                        <td class="text-center">8.6</td>
-                                                        <td class="text-center">4.5</td>
-                                                        <td class="text-center">9.54</td>
-                                                        <td class="text-primary text-center">7.44</td>
-                                                        <td class="text-primary text-success"><span
-                                                                class="text-success">6.8</span></td>
+                                                        <td class="text-center">9</td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-primary text-center">8.35</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-primary text-center">8.04</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">5</td>
+                                                        <td class="text-primary text-center">6.75</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-success">7.7</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-warning">79%</span>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center">Ciencias</td>
-                                                        <td class="text-center">6</td>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">7</td>
-                                                        <td class="text-primary text-center">4.55</td>
-                                                        <td class="text-center">6</td>
+                                                        <td class="text-center">9</td>
                                                         <td class="text-center">8</td>
-                                                        <td class="text-center">3</td>
-                                                        <td class="text-primary text-center">5.79</td>
-                                                        <td class="text-center">6</td>
-                                                        <td class="text-center">3</td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-primary text-center">8.35</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
                                                         <td class="text-center">7</td>
-                                                        <td class="text-primary text-center">5.25</td>
-                                                        <td class="text-primary text-success"><span
-                                                                class="text-success">5.2</span></td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-primary text-center">8.04</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">5</td>
+                                                        <td class="text-primary text-center">6.75</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-success">7.7</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-warning">79%</span>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-center">Sociales</td>
-                                                        <td class="text-center">4</td>
-                                                        <td class="text-center">5</td>
-                                                        <td class="text-center">6</td>
-                                                        <td class="text-primary text-center">4.94</td>
-                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">9</td>
                                                         <td class="text-center">8</td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-primary text-center">8.35</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-center">7</td>
+                                                        <td class="text-primary text-center">8.04</td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-center">8</td>
+                                                        <td class="text-center">7</td>
                                                         <td class="text-center">5</td>
                                                         <td class="text-primary text-center">6.75</td>
-                                                        <td class="text-center">8</td>
-                                                        <td class="text-center">4.6</td>
-                                                        <td class="text-center">7</td>
-                                                        <td class="text-primary text-center">6.51</td>
-                                                        <td class="text-primary text-success"><span
-                                                                class="text-success">6.1</span></td>
+                                                        <td class="text-center">
+                                                            <span class="text-warning">20%</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-success">7.7</span>
+                                                        </td>
+                                                        <td class="text-primary text-success text-center">
+                                                            <span class="text-warning">79%</span>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -331,7 +385,7 @@
 
 
 
-    <!-- MODAL AGREGAR NOTA PERIODOS  -->
+    <!-- MODAL AGREGAR NOTA TrimestreS  -->
     <div class="modal fade" id="mdPrevImpresion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -363,9 +417,9 @@
                             </style>
                             <label class="bmd-label-floating"></label>
                             <select class="selPer form-control" id="selPerFnNotas" required>
-                                <option value="I Periodo">I Trimestre</option>
-                                <option value="II Periodo">II Trimestre</option>
-                                <option value="III Periodo">III Trimestre</option>
+                                <option value="I Trimestre">I Trimestre</option>
+                                <option value="II Trimestre">II Trimestre</option>
+                                <option value="III Trimestre">III Trimestre</option>
                                 <option value="Finales">Finales</option>
                             </select>
                         </div>
